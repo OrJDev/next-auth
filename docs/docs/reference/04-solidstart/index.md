@@ -4,7 +4,9 @@ title: SolidStart Auth
 
 # Getting started
 
-Recommended to use [create-jd-app](https://github.com/OrJDev/create-jd-app)
+Recommended to use [create-jd-app](https://github.com/OrJDev/create-jd-app), this will create a new SolidStart app with `@auth/solid-start`, generated secret and optionally prisma configuration.
+
+## Installation
 
 ```bash
 npm install @auth/solid-start@latest @auth/core@latest
@@ -34,6 +36,7 @@ import GitHub from "@auth/core/providers/github"
 
 export const authOpts: SolidAuthConfig = {
   providers: [
+    // @ts-expect-error types issue
     GitHub({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
